@@ -1,3 +1,12 @@
+使用nodejs库 nodejieba 来分词，nodejieba本身是对c++库的封装，所以安装这个模块的时候需要c++环境
+
+如果需要在前端使用搜索功能，需要先在后端处理文件，把索引保存成json格式，然后在前端引用
+
+最初只是为了替换 gitbook 中的lunr依赖
+
+注意：没有补全对应的测试用例
+
+------
 # Lunr.js
 
 [![Join the chat at https://gitter.im/olivernn/lunr.js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/olivernn/lunr.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -21,9 +30,9 @@ Adding documents to be indexed is as simple as:
 
 ```javascript
 var doc = {
-    "title": "Twelfth-Night",
-    "body": "If music be the food of love, play on: Give me excess of it…",
-    "author": "William Shakespeare",
+    "title": "黄金时代",
+    "body": "那一天我二十一岁，在我一生的黄金时代，我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。",
+    "author": "王小波",
     "id": 1
 }
 idx.add(doc)
@@ -32,7 +41,7 @@ idx.add(doc)
 Then searching is as simple:
 
 ```javascript
-idx.search("love")
+idx.search("生活")
 ```
 
 This returns a list of matching documents with a score of how closely they match the search query:
@@ -40,7 +49,7 @@ This returns a list of matching documents with a score of how closely they match
 ```javascript
 [{
     "ref": 1,
-    "score": 0.87533
+    "score": 0.0011097036390631915
 }]
 ```
 
