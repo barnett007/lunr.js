@@ -1,4 +1,5 @@
 更好的方案： https://github.com/MihaiValentin/lunr-languages/pull/53
+
 Maybe a better one:  https://github.com/MihaiValentin/lunr-languages/pull/53
 
 --------------
