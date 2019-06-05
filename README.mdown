@@ -1,3 +1,8 @@
+更好的方案： https://github.com/MihaiValentin/lunr-languages/pull/53
+Maybe a better one:  https://github.com/MihaiValentin/lunr-languages/pull/53
+
+--------------
+
 Use a node module to index the document content, if you want to use this in a browser,index documents in command line, dump lunr index object to a file and use that file to init lunr.js in browser, the file may be very large if the document is large.
 
 使用nodejs库 nodejieba 来分词，nodejieba本身是对c++库的封装，所以安装这个模块的时候需要c++环境
